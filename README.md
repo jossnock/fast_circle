@@ -2,4 +2,4 @@
 
 ## About
 
-A simple game where you control a circle, moving through stages
+A simple game where you control a circle, moving through stages.
