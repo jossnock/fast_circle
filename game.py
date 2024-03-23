@@ -23,6 +23,7 @@ circle_x_past = 100
 circle_y_past = 100
 GRAVITY = 0.25
 HORIZONTAL_GRAVITY = 1
+has_trail = False
 
 circle_x_velocity_max = 20
 circle_x_velocity_min = 0
@@ -57,9 +58,9 @@ while running:
     circle_x_past = circle_centre_x
     circle_y_past = circle_centre_y
 
-    # fill the space of the circle before movement with background_colour to wipe away anything from last frame: 
-    # WORK IN PROGRESS
-    pygame.draw.circle(SCREEN, background_colour, (circle_x_past,circle_y_past), circle_radius, circle_width)
+    # fill the screen with background_colour to wipe away anything from last frame: 
+    if has_trail == False:
+        SCREEN.fill(background_colour)
 
     # render the circle:
     pygame.draw.circle(SCREEN, circle_colour_primary, (circle_centre_x,circle_centre_y), circle_radius, circle_width, True, False, True)
